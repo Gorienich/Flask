@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <title>LockMaster App</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Upload File (Left) -->
+    <div class="upload-section">
+      <h2>Upload File</h2>
+      <label for="uploadFile">choose file</label>
+      <input type="file" id="uploadFile" /><br><br>
+      <button onclick="uploadFile()">Upload & Lock</button>
+      <div id="uploadStatus"></div>
+    </div>
+
+    <!-- Unlock File (Right) -->
+    <div class="unlock-section">
+      <h2>Unlock File</h2>
+      <input type="text" id="lockedFile" placeholder="Enter locked file path"/><br><br>
+      <button onclick="unlockFile()">Unlock</button>
+      <div id="unlockStatus"></div>
+    </div>
+  </div>
+
+  <!-- Unlocked File Content (Bottom) -->
+  <div class="unlocked-content">
+    <h2>Unlocked File Content</h2>
+    <pre id="unlockedFileContent"></pre> <!-- Display unlocked file content here -->
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

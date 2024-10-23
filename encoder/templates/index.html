@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Sending Text (Left) -->
+    <div class="sending-text">
+        <h2>Send Text</h2>
+        <textarea id="inputText" rows="5" cols="30" placeholder="Type text here..."></textarea><br>
+        <button onclick="sendText()">Send</button>
+    </div>
+
+    <!-- Received Text (Right) -->
+    <div class="received-text">
+        <h2>Received Text</h2>
+        <div id="receivedText"></div>
+    </div>
+
+    <!-- Encoded Text (Bottom) -->
+    <div class="encoded-text">
+        <h2>Encoded Text</h2>
+        <div id="encodedText"></div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
